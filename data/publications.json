@@ -73,7 +73,9 @@
     "venueType": "published",
     "year": 2025,
     "tags": ["Computer Vision", "Transportation"],
-    "links": {},
+    "links": {
+      "pdf": "https://drive.google.com/file/d/13j4DRfTqSd7juv1muIJWN91VTOcx2-IY/view?usp=sharing"
+    },
     "thumbnail": "assets/images/pub-thumbnails/busstop.png",
     "abstract": "The assessment of bus stop amenities is important for providing fundamental data for public transit research, planning, and infrastructure enhancements. This study develops an automated, low-cost, and generalizable approach using Google Street View images and deep learning techniques to evaluate bus stop amenities. Leveraging the YOLOv8 model, transfer learning, and a dynamic prediction algorithm, the approach achieves efficient detection of shelters and benches with high accuracy and precision in major Florida cities. Results reveal highly heterogeneous spatial patterns for both shelters and benches within and across cities."
   },
