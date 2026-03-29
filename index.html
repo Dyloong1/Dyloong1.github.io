@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yilong Dai — PhD Student, University of Alabama</title>
+  <meta name="description" content="Yilong Dai is a PhD student at the University of Alabama, researching AI for Science, Physics-Informed ML, and Large Language Models. Advised by Prof. Runlong Yu.">
+  <meta name="author" content="Yilong Dai">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yilong Dai — PhD Student, University of Alabama">
+  <meta property="og:description" content="Research in AI for Science, Physics-Informed ML, LLM, and Computer Vision.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dyloong1.github.io/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Y</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">YD</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero / About -->
+  <section class="hero" id="about">
+    <div class="hero__bg"></div>
+    <div class="hero__inner">
+      <div class="hero__left">
+        <div class="avatar">
+          <img src="assets/images/face.jpeg" alt="Yilong Dai">
+        </div>
+        <div class="social-icons">
+          <a href="mailto:ydai17@ua.edu" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/Dyloong1" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://scholar.google.com/citations?user=GsTyeUMAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://www.linkedin.com/in/yilong-dai-41489524a" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="hero__right">
+        <h1 class="hero__name">Yilong Dai</h1>
+        <p class="hero__role">PhD Student, University of Alabama</p>
+        <p class="hero__advisor">Advised by <a href="https://runlongyu.github.io/" target="_blank" rel="noopener">Prof. Runlong Yu</a></p>
+        <div class="hero__divider"></div>
+        <div class="hero__bio">
+          <p>I am a first-year PhD student in Computer Science at the University of Alabama, advised by Prof. Runlong Yu. My research focuses on <strong>AI for Science</strong>, including physics-informed neural networks, neural operators, generative methods, and foundation models for PDE solving and turbulence simulation.</p>
+          <p>I also have experience in large language models, computer vision, and transportation applications. Previously, I obtained my M.S. in Computer Science from the University of Florida and my B.E. from Xi'an Jiaotong University.</p>
+        </div>
+        <div class="hero__tags">
+          <span class="tag">AI for Science</span>
+          <span class="tag">Physics-Informed ML</span>
+          <span class="tag">LLM</span>
+          <span class="tag">Computer Vision</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section" id="news">
+    <div class="section__inner">
+      <h2 class="section__title">News</h2>
+      <div id="news-list" class="news-list">
+        <!-- Rendered by JS from data/news.json -->
+      </div>
+      <button class="show-all-btn" id="news-toggle" style="display:none;">Show all</button>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section class="section section--alt" id="publications">
+    <div class="section__inner section__inner--wide">
+      <h2 class="section__title">Publications</h2>
+      <p class="section__subtitle">* denotes equal contribution</p>
+      <div class="pub-filters" id="pub-filters">
+        <!-- Rendered by JS -->
+      </div>
+      <div id="pub-list" class="pub-list">
+        <!-- Rendered by JS from data/publications.json -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="section__inner">
+      <h2 class="section__title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <div class="timeline__row">
+            <img class="timeline__logo" src="assets/images/logos/ua-square-logo.png" alt="University of Alabama">
+            <div class="timeline__content">
+              <span class="timeline__date">2025 — Present</span>
+              <h3 class="timeline__role">PhD Student</h3>
+              <p class="timeline__org">University of Alabama</p>
+              <p class="timeline__desc">AI for Science research — physics-informed ML, neural operators, turbulence simulation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <div class="timeline__row">
+            <img class="timeline__logo" src="assets/images/logos/University-of-Florida-logo.webp" alt="University of Florida">
+            <div class="timeline__content">
+              <span class="timeline__date">Oct 2023 — Jan 2026</span>
+              <h3 class="timeline__role">Research Assistant</h3>
+              <p class="timeline__org">University of Florida</p>
+              <p class="timeline__desc">Computer vision for transportation — bikeability assessment, bus stop amenities, street design.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <div class="timeline__row">
+            <img class="timeline__logo" src="assets/images/logos/UW-logo-512.png" alt="University of Washington">
+            <div class="timeline__content">
+              <span class="timeline__date">Apr 2025 — Nov 2025</span>
+              <h3 class="timeline__role">Research Assistant</h3>
+              <p class="timeline__org">University of Washington</p>
+              <p class="timeline__desc">LLM agents in finance, visual navigation instruction generation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <div class="timeline__row">
+            <img class="timeline__logo" src="assets/images/logos/bosch.png" alt="Bosch">
+            <div class="timeline__content">
+              <span class="timeline__date">Apr 2023 — Aug 2023</span>
+              <h3 class="timeline__role">Software Engineer Intern</h3>
+              <p class="timeline__org">Bosch</p>
+              <p class="timeline__desc">Vehicle simulation — auto response patterns, simulation web pages.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <div class="timeline__row">
+            <img class="timeline__logo" src="assets/images/logos/png-clipart-logo-unionpay-credit-card-atm-card-bank-card-credit-card-text-payment.png" alt="China UnionPay">
+            <div class="timeline__content">
+              <span class="timeline__date">Aug 2021 — Oct 2021</span>
+              <h3 class="timeline__role">Java Software Engineer</h3>
+              <p class="timeline__org">China UnionPay</p>
+              <p class="timeline__desc">User profile modeling, internal log monitoring system migration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section section--alt" id="education">
+    <div class="section__inner">
+      <h2 class="section__title">Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card fade-in">
+          <h3 class="edu-card__school">University of Alabama</h3>
+          <p class="edu-card__degree">Ph.D. in Computer Science</p>
+          <span class="edu-card__date">2025 — Present</span>
+          <p class="edu-card__note">Focus: AI for Science</p>
+        </div>
+        <div class="edu-card fade-in">
+          <h3 class="edu-card__school">University of Florida</h3>
+          <p class="edu-card__degree">M.S. in Computer Science</p>
+          <span class="edu-card__date">Aug 2022 — Dec 2024</span>
+          <p class="edu-card__note">RA in SERMOS Lab & Just & Green Transportation Lab</p>
+        </div>
+        <div class="edu-card fade-in">
+          <h3 class="edu-card__school">Xi'an Jiaotong University</h3>
+          <p class="edu-card__degree">B.E. in Computer Software Engineering</p>
+          <span class="edu-card__date">Sep 2018 — Jun 2022</span>
+          <p class="edu-card__note">RoboCup 2nd Prize (2020 China Open)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner">
+      <h2 class="section__title">Get in Touch</h2>
+      <a href="mailto:ydai17@ua.edu" class="footer__email">ydai17@ua.edu</a>
+      <div class="footer__icons">
+        <a href="https://github.com/Dyloong1" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=GsTyeUMAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://www.linkedin.com/in/yilong-dai-41489524a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="footer__updated">Last updated: March 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>
