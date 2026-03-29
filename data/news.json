@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2026-03",
+    "text": "Paper accepted at <strong>DIS 2026</strong>: <a href='https://arxiv.org/abs/2601.15671'>StreetDesignAI: A Multi-Persona Evaluation System for Inclusive Infrastructure Design</a>."
+  },
+  {
+    "date": "2026-02",
+    "text": "New preprint: <a href='https://arxiv.org/abs/2602.10150'>PEST: Physics-Enhanced Swin Transformer for 3D Turbulence Simulation</a> is now on arXiv."
+  },
+  {
+    "date": "2026-01",
+    "text": "New preprint: <a href='https://arxiv.org/abs/2601.14517'>Learning PDE Solvers with Physics and Data: A Unifying View of Physics-Informed Neural Networks and Neural Operators</a> is now on arXiv."
+  },
+  {
+    "date": "2026-01",
+    "text": "New preprint: <a href='https://arxiv.org/abs/2601.03534'>Persona-aware and Explainable Bikeability Assessment: A Vision-Language Model Approach</a> is now on arXiv."
+  },
+  {
+    "date": "2025",
+    "text": "Started PhD at the <strong>University of Alabama</strong>, advised by <a href='https://runlongyu.github.io/'>Prof. Runlong Yu</a>."
+  },
+  {
+    "date": "2025",
+    "text": "Paper accepted at <strong>EMNLP 2025</strong>: <a href='https://aclanthology.org/2025.findings-emnlp.972/'>Large Language Model Agents in Finance: A Survey Bridging Research, Practice, and Real-World Deployment</a>."
+  },
+  {
+    "date": "2025",
+    "text": "Paper published in <strong>Computers, Environment and Urban Systems</strong>: Using Computer Vision and Street View Images to Assess Bus Stop Amenities."
+  },
+  {
+    "date": "2025",
+    "text": "Paper accepted at <strong>NeurIPS 2025 Workshop</strong>: <a href='https://arxiv.org/abs/2509.05469'>From Image Generation to Infrastructure Design: A Multi-Agent Pipeline for Street Design Generation</a>."
+  },
+  {
+    "date": "2024-12",
+    "text": "Graduated with <strong>M.S. in Computer Science</strong> from the University of Florida."
+  }
+]

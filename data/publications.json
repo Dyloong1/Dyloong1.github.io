@@ -1,0 +1,119 @@
+[
+  {
+    "title": "StreetDesignAI: A Multi-Persona Evaluation System for Inclusive Infrastructure Design",
+    "authors": "Z Wang*, Y Dai*, D Lyu, M Nader, S Chen, W Ye, Z Ding, X Yan",
+    "venue": "DIS 2026",
+    "venueType": "published",
+    "year": 2026,
+    "tags": ["Computer Vision", "Transportation"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2601.15671"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/streetdesignai.png",
+    "abstract": "Designing inclusive cycling infrastructure requires balancing competing needs of diverse user groups, yet designers often struggle to anticipate how different cyclists experience the same street. We present StreetDesignAI, an interactive system that enables designers to ground evaluation in street context through imagery and map data, receive parallel feedback from cyclist personas spanning confident to cautious users, and iteratively modify designs while surfacing conflicts across perspectives. A within-subjects study with 26 transportation professionals demonstrates that structured multi-perspective feedback significantly improves designers' understanding of diverse user perspectives."
+  },
+  {
+    "title": "PEST: Physics-Enhanced Swin Transformer for 3D Turbulence Simulation",
+    "authors": "Y Dai, S Chen, X Jia, P Givi, R Yu",
+    "venue": "arXiv",
+    "venueType": "preprint",
+    "year": 2026,
+    "tags": ["Physics-Informed ML"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2602.10150",
+      "code": "https://github.com/Dyloong1/PEST"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/pest.png",
+    "abstract": "Accurate simulation of turbulent flows is fundamental to scientific and engineering applications. Direct numerical simulation (DNS) offers the highest fidelity but is computationally prohibitive, while existing data-driven alternatives struggle with stable long-horizon rollouts, physical consistency, and faithful simulation of small-scale structures. To address these challenges, we propose a Physics-Enhanced Swin Transformer (PEST) for 3D turbulence simulation. PEST leverages a window-based self-attention mechanism to effectively model localized PDE interactions while maintaining computational efficiency. We introduce a frequency-domain adaptive loss that explicitly emphasizes small-scale structures, enabling more faithful simulation of high-frequency dynamics. To improve physical consistency, we incorporate Navier-Stokes residual constraints and divergence-free regularization directly into the learning objective."
+  },
+  {
+    "title": "Learning PDE Solvers with Physics and Data: A Unifying View of Physics-Informed Neural Networks and Neural Operators",
+    "authors": "Y Dai, S Chen, Z Wang, X Jia, Y Xie, V Kumar, R Yu",
+    "venue": "arXiv",
+    "venueType": "preprint",
+    "year": 2026,
+    "tags": ["Physics-Informed ML"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2601.14517"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/pde-solvers.png",
+    "abstract": "Partial differential equations (PDEs) are central to scientific modeling. Despite the emergence of various physics-aware data-driven approaches, the field still lacks a unified perspective to uncover their relationships, limitations, and appropriate roles in scientific workflows. We propose a unifying perspective to place two dominant paradigms — Physics-Informed Neural Networks (PINNs) and Neural Operators (NOs) — within a shared design space. We organize existing methods from three fundamental dimensions: what is learned, how physical structures are integrated into the learning process, and how the computational load is amortized across problem instances."
+  },
+  {
+    "title": "Persona-aware and Explainable Bikeability Assessment: A Vision-Language Model Approach",
+    "authors": "Y Dai*, Z Wang*, C Wang, K Zhou, Y Qian, S Xu, X Yan",
+    "venue": "arXiv",
+    "venueType": "preprint",
+    "year": 2026,
+    "tags": ["Computer Vision", "Transportation"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2601.03534",
+      "code": "https://github.com/Dyloong1/Bikeability-Assessment"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/bikeability.png",
+    "abstract": "Bikeability assessment is essential for advancing sustainable urban transportation and creating cyclist-friendly cities. We propose a persona-aware Vision-Language Model framework with three key innovations: theory-grounded persona conditioning based on cyclist typology, multi-granularity supervised fine-tuning combining expert annotations with user ratings, and AI-enabled data augmentation for isolating infrastructure impacts. We developed a crowdsourcing system collecting 12,400 assessments from 427 cyclists using panoramic images. Results demonstrate the framework provides competitive bikeability rating predictions while enabling explainable factor attribution."
+  },
+  {
+    "title": "Large Language Model Agents in Finance: A Survey Bridging Research, Practice, and Real-World Deployment",
+    "authors": "Y Dong, F Wu, K Zhang, Y Dai, S Zhang, W Ye, S Chen, ZQ Cheng",
+    "venue": "EMNLP 2025",
+    "venueType": "published",
+    "year": 2025,
+    "tags": ["LLM"],
+    "links": {
+      "pdf": "https://aclanthology.org/2025.findings-emnlp.972.pdf"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/finllm.png",
+    "abstract": "Large language models (LLMs) are increasingly applied to finance, yet challenges remain in aligning their capabilities with real-world institutional demands. We provide a systematic, dual-perspective review bridging financial practice and LLM research. From a practitioner-centric standpoint, we introduce a functional taxonomy covering five core financial domains — Data Analysis, Investment Research, Trading, Investment Management, and Risk Management. From a research-focused perspective, we analyze key modeling challenges, including numerical reasoning limitations, prompt sensitivity, and lack of real-time adaptability. We comprehensively catalog over 30 financial benchmarks and 20 representative models."
+  },
+  {
+    "title": "Using Computer Vision and Street View Images to Assess Bus Stop Amenities",
+    "authors": "Y Dai, L Liu, K Wang, M Li, X Yan",
+    "venue": "Computers, Environment and Urban Systems, 2025",
+    "venueType": "published",
+    "year": 2025,
+    "tags": ["Computer Vision", "Transportation"],
+    "links": {},
+    "thumbnail": "assets/images/pub-thumbnails/busstop.png",
+    "abstract": "The assessment of bus stop amenities is important for providing fundamental data for public transit research, planning, and infrastructure enhancements. This study develops an automated, low-cost, and generalizable approach using Google Street View images and deep learning techniques to evaluate bus stop amenities. Leveraging the YOLOv8 model, transfer learning, and a dynamic prediction algorithm, the approach achieves efficient detection of shelters and benches with high accuracy and precision in major Florida cities. Results reveal highly heterogeneous spatial patterns for both shelters and benches within and across cities."
+  },
+  {
+    "title": "From Image Generation to Infrastructure Design: A Multi-Agent Pipeline for Street Design Generation",
+    "authors": "C Wang, X Yan, Y Dai, Z Wang, S Xu",
+    "venue": "NeurIPS 2025 Workshop",
+    "venueType": "published",
+    "year": 2025,
+    "tags": ["Computer Vision", "Transportation"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2509.05469"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/street-design.png",
+    "abstract": "Realistic visual renderings of street-design scenarios are essential for public engagement in active transportation planning. We introduce a multi-agent system that edits and redesigns bicycle facilities directly on real-world street-view imagery. The framework integrates lane localization, prompt optimization, design generation, and automated evaluation to synthesize realistic, contextually appropriate designs. Experiments across diverse urban scenarios demonstrate that the system can adapt to varying road geometries and environmental conditions, consistently yielding visually coherent and instruction-compliant results."
+  },
+  {
+    "title": "Govig: Goal-Conditioned Visual Navigation Instruction Generation",
+    "authors": "F Wu, Y Dong, ZQ Cheng, Y Dai, G Chen, H Wang, Q Dai, AG Hauptmann",
+    "venue": "arXiv",
+    "venueType": "preprint",
+    "year": 2025,
+    "tags": ["Computer Vision", "LLM"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2508.09547"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/govig.png",
+    "abstract": "We introduce Goal-Conditioned Visual Navigation Instruction Generation (GoViG), a new task that aims to autonomously generate precise and contextually coherent navigation instructions solely from egocentric visual observations of initial and goal states. Our method decomposes this into two subtasks: visual forecasting, which predicts intermediate visual states; and instruction generation, which synthesizes linguistically coherent instructions grounded in both observed and anticipated visuals. These subtasks are integrated within an autoregressive multimodal large language model trained with tailored objectives."
+  },
+  {
+    "title": "CogniPair: From LLM Chatbots to Conscious AI Agents — GNWT-Based Multi-Agent Digital Twins for Social Pairing",
+    "authors": "W Ye, S Chen, Y Wang, S He, B Tian, G Sun, Z Wang, Z Wang, Y He, ...",
+    "venue": "arXiv",
+    "venueType": "preprint",
+    "year": 2025,
+    "tags": ["LLM"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2506.03543"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/cognipair.png",
+    "abstract": "Current large language model agents lack authentic human psychological processes necessary for genuine digital twins and social AI applications. We present a computational implementation of Global Workspace Theory that integrates human cognitive architecture principles into LLM agents, creating specialized sub-agents for emotion, memory, social norms, planning, and goal-tracking coordinated through a global workspace mechanism. The CogniPair platform enables digital twins to engage in realistic simulated dating interactions and job interviews. Validation demonstrates 72% correlation with human attraction patterns and 77.8% match prediction accuracy."
+  }
+]
