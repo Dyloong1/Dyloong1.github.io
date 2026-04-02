@@ -1,5 +1,18 @@
 [
   {
+    "title": "Language-Conditioned World Modeling for Visual Navigation",
+    "authors": "Y Dong*, F Wu*, Y Dai*, L Kong, G Chen, X Zhu, Q Hu, T Wang, J Garnica, F Liu, S Huang, Q Dai, ZQ Cheng",
+    "venue": "arXiv",
+    "venueType": "preprint",
+    "year": 2026,
+    "tags": ["Computer Vision", "LLM"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2603.26741"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/lantern.png",
+    "abstract": "We address language-conditioned visual navigation where an embodied agent must follow natural language instructions using only initial egocentric observations. We formulate this as open-loop trajectory prediction and create the LCVN Dataset containing 39,016 trajectories with 117,048 human-verified instructions. We develop two complementary model families: one combining a diffusion-based world model (LCVN-WM) with an actor-critic agent (LCVN-AC) operating in latent space, and another using an autoregressive multimodal architecture (LCVN-Uni) that predicts both actions and future observations."
+  },
+  {
     "title": "StreetDesignAI: A Multi-Persona Evaluation System for Inclusive Infrastructure Design",
     "authors": "Z Wang*, Y Dai*, D Lyu, M Nader, S Chen, W Ye, Z Ding, X Yan",
     "venue": "DIS 2026",
