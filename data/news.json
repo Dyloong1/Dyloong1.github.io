@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05",
+    "text": "Paper accepted at <strong>IJCAI 2026</strong>: <a href='https://arxiv.org/abs/2601.14517'>Learning PDE Solvers with Physics and Data: A Unifying View of Physics-Informed Neural Networks and Neural Operators</a>."
+  },
+  {
+    "date": "2026-05",
+    "text": "New preprint: <a href='https://arxiv.org/abs/2604.17149'>FlowRefiner: Flow Matching-Based Iterative Refinement for 3D Turbulent Flow Simulation</a> is now on arXiv."
+  },
+  {
     "date": "2026-03",
     "text": "New preprint: <a href='https://arxiv.org/abs/2603.26741'>Language-Conditioned World Modeling for Visual Navigation</a> is now on arXiv."
   },
