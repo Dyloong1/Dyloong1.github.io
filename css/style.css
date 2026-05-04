@@ -393,6 +393,20 @@ img {
   display: none;
 }
 
+.news-icon {
+  flex: 0 0 1.4rem;
+  font-size: 1.05rem;
+  color: var(--text);
+  opacity: 0.65;
+  text-align: center;
+  line-height: 1;
+}
+
+.news-icon--accepted {
+  color: var(--accent-warm);
+  opacity: 1;
+}
+
 .news-date {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -988,12 +1002,27 @@ img {
   }
 
   .news-item {
-    flex-direction: column;
-    gap: 0.2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "icon date"
+      "text text";
+    column-gap: 0.5rem;
+    row-gap: 0.2rem;
+  }
+
+  .news-icon {
+    grid-area: icon;
+    flex: none;
   }
 
   .news-date {
+    grid-area: date;
     flex: none;
+  }
+
+  .news-text {
+    grid-area: text;
   }
 
   .pub-card {
