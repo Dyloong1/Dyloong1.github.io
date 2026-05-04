@@ -71,9 +71,24 @@ async function loadNews() {
     const toggleBtn = document.getElementById('news-toggle');
     const SHOW_COUNT = 5;
 
+    let currentYear = null;
+    const yearHeaders = {};
+
     news.forEach((item, i) => {
+      const year = item.date.split('-')[0];
+      if (year !== currentYear) {
+        const header = document.createElement('div');
+        header.className = 'news-year';
+        header.dataset.year = year;
+        header.innerHTML = `<span class="news-year__line"></span><span class="news-year__label">${year}</span><span class="news-year__line"></span>`;
+        list.appendChild(header);
+        yearHeaders[year] = header;
+        currentYear = year;
+      }
+
       const el = document.createElement('div');
       el.className = 'news-item fade-in' + (i >= SHOW_COUNT ? ' hidden' : '');
+      el.dataset.year = year;
       const emoji = NEWS_ICONS[item.type] || '';
       const iconHtml = emoji
         ? `<span class="news-icon news-icon--${item.type}">${emoji}</span>`
@@ -86,6 +101,14 @@ async function loadNews() {
       list.appendChild(el);
     });
 
+    const updateYearVisibility = () => {
+      Object.entries(yearHeaders).forEach(([year, header]) => {
+        const anyVisible = list.querySelector(`.news-item[data-year="${year}"]:not(.hidden)`);
+        header.classList.toggle('hidden', !anyVisible);
+      });
+    };
+    updateYearVisibility();
+
     if (news.length > SHOW_COUNT) {
       toggleBtn.style.display = 'inline-block';
       let expanded = false;
@@ -96,6 +119,7 @@ async function loadNews() {
             el.classList.toggle('hidden', !expanded);
           }
         });
+        updateYearVisibility();
         toggleBtn.textContent = expanded ? 'Show less' : 'Show all';
       });
     }
