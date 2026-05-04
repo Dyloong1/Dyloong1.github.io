@@ -56,6 +56,13 @@ function initNav() {
 }
 
 /* --- News --- */
+const NEWS_ICONS = {
+  accepted:  'fa-solid fa-champagne-glasses',
+  preprint:  'fa-solid fa-file-lines',
+  phd_start: 'fa-solid fa-graduation-cap',
+  graduated: 'fa-solid fa-user-graduate'
+};
+
 async function loadNews() {
   try {
     const res = await fetch('data/news.json');
@@ -67,7 +74,12 @@ async function loadNews() {
     news.forEach((item, i) => {
       const el = document.createElement('div');
       el.className = 'news-item fade-in' + (i >= SHOW_COUNT ? ' hidden' : '');
+      const iconClass = NEWS_ICONS[item.type] || '';
+      const iconHtml = iconClass
+        ? `<span class="news-icon news-icon--${item.type}"><i class="${iconClass}"></i></span>`
+        : `<span class="news-icon news-icon--empty" aria-hidden="true"></span>`;
       el.innerHTML = `
+        ${iconHtml}
         <span class="news-date">${formatDate(item.date)}</span>
         <span class="news-text">${item.text}</span>
       `;
