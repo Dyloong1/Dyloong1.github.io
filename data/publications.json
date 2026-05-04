@@ -1,5 +1,31 @@
 [
   {
+    "title": "Learning PDE Solvers with Physics and Data: A Unifying View of Physics-Informed Neural Networks and Neural Operators",
+    "authors": "Y Dai, S Chen, Z Wang, X Jia, Y Xie, V Kumar, R Yu",
+    "venue": "IJCAI 2026",
+    "venueType": "published",
+    "year": 2026,
+    "tags": ["Physics-Informed ML"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2601.14517"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/pde-solvers.png",
+    "abstract": "Partial differential equations (PDEs) are central to scientific modeling. Despite the emergence of various physics-aware data-driven approaches, the field still lacks a unified perspective to uncover their relationships, limitations, and appropriate roles in scientific workflows. We propose a unifying perspective to place two dominant paradigms — Physics-Informed Neural Networks (PINNs) and Neural Operators (NOs) — within a shared design space. We organize existing methods from three fundamental dimensions: what is learned, how physical structures are integrated into the learning process, and how the computational load is amortized across problem instances."
+  },
+  {
+    "title": "FlowRefiner: Flow Matching-Based Iterative Refinement for 3D Turbulent Flow Simulation",
+    "authors": "Y Dai, Y Sun, Y Chen, S Chen, X Jia, R Yu",
+    "venue": "arXiv",
+    "venueType": "preprint",
+    "year": 2026,
+    "tags": ["Physics-Informed ML"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2604.17149"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/flow_refiner.png",
+    "abstract": "Accurate autoregressive prediction of 3D turbulent flows remains challenging for neural PDE solvers, as small errors in fine-scale structures can accumulate rapidly over rollout. In this paper, we propose FlowRefiner, a flow matching-based iterative refinement framework for 3D turbulent flow simulation. The method replaces stochastic denoising refinement with deterministic ODE-based correction, uses a unified velocity-field regression objective across all refinement stages, and introduces a decoupled sigma schedule that fixes the noise range independently of refinement depth. These design choices yield stable and effective refinement in the small-noise regime. Experiments on large-scale 3D turbulence with rich multi-scale structures show that FlowRefiner achieves state-of-the-art autoregressive prediction accuracy and strong physical consistency. Although developed for turbulent flow simulation, the proposed framework is broadly applicable to iterative refinement problems in scientific modeling."
+  },
+  {
     "title": "Language-Conditioned World Modeling for Visual Navigation",
     "authors": "Y Dong*, F Wu*, Y Dai*, L Kong, G Chen, X Zhu, Q Hu, T Wang, J Garnica, F Liu, S Huang, Q Dai, ZQ Cheng",
     "venue": "arXiv",
@@ -38,19 +64,6 @@
     },
     "thumbnail": "assets/images/pub-thumbnails/pest.png",
     "abstract": "Accurate simulation of turbulent flows is fundamental to scientific and engineering applications. Direct numerical simulation (DNS) offers the highest fidelity but is computationally prohibitive, while existing data-driven alternatives struggle with stable long-horizon rollouts, physical consistency, and faithful simulation of small-scale structures. To address these challenges, we propose a Physics-Enhanced Swin Transformer (PEST) for 3D turbulence simulation. PEST leverages a window-based self-attention mechanism to effectively model localized PDE interactions while maintaining computational efficiency. We introduce a frequency-domain adaptive loss that explicitly emphasizes small-scale structures, enabling more faithful simulation of high-frequency dynamics. To improve physical consistency, we incorporate Navier-Stokes residual constraints and divergence-free regularization directly into the learning objective."
-  },
-  {
-    "title": "Learning PDE Solvers with Physics and Data: A Unifying View of Physics-Informed Neural Networks and Neural Operators",
-    "authors": "Y Dai, S Chen, Z Wang, X Jia, Y Xie, V Kumar, R Yu",
-    "venue": "arXiv",
-    "venueType": "preprint",
-    "year": 2026,
-    "tags": ["Physics-Informed ML"],
-    "links": {
-      "arxiv": "https://arxiv.org/abs/2601.14517"
-    },
-    "thumbnail": "assets/images/pub-thumbnails/pde-solvers.png",
-    "abstract": "Partial differential equations (PDEs) are central to scientific modeling. Despite the emergence of various physics-aware data-driven approaches, the field still lacks a unified perspective to uncover their relationships, limitations, and appropriate roles in scientific workflows. We propose a unifying perspective to place two dominant paradigms — Physics-Informed Neural Networks (PINNs) and Neural Operators (NOs) — within a shared design space. We organize existing methods from three fundamental dimensions: what is learned, how physical structures are integrated into the learning process, and how the computational load is amortized across problem instances."
   },
   {
     "title": "Persona-aware and Explainable Bikeability Assessment: A Vision-Language Model Approach",
