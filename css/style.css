@@ -378,10 +378,7 @@ img {
 }
 
 .news-year {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin: 1.4rem 0 0.4rem;
+  margin: 1.6rem 0 0.3rem;
   font-family: var(--font-body);
 }
 
@@ -394,13 +391,10 @@ img {
 }
 
 .news-year__line {
-  flex: 1 1 auto;
-  height: 1px;
-  background: var(--border-light);
+  display: none;
 }
 
 .news-year__label {
-  flex: 0 0 auto;
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.08em;
