@@ -2,6 +2,11 @@
   {
     "date": "2026-05",
     "type": "accepted",
+    "text": "Paper accepted at <strong>KDD 2026 (Blue Sky Track)</strong>: <a href='https://arxiv.org/abs/2604.07366'>Flow Learners for PDEs: Toward a Physics-to-Physics Paradigm for Scientific Computing</a>."
+  },
+  {
+    "date": "2026-05",
+    "type": "accepted",
     "text": "Paper accepted at <strong>IJCAI 2026</strong>: <a href='https://arxiv.org/abs/2601.14517'>Learning PDE Solvers with Physics and Data: A Unifying View of Physics-Informed Neural Networks and Neural Operators</a>."
   },
   {
