@@ -1,5 +1,18 @@
 [
   {
+    "title": "Flow Learners for PDEs: Toward a Physics-to-Physics Paradigm for Scientific Computing",
+    "authors": "Y Dai, S Chen, X Jia, R Yu",
+    "venue": "KDD 2026 (Blue Sky Track)",
+    "venueType": "published",
+    "year": 2026,
+    "tags": ["Physics-Informed ML"],
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2604.07366"
+    },
+    "thumbnail": "assets/images/pub-thumbnails/flow_learner_fig1.png",
+    "abstract": "Partial differential equations (PDEs) govern nearly every physical process in science and engineering, yet solving them at scale remains prohibitively expensive. Generative AI has transformed language, vision, and protein science, but learned PDE solvers have not undergone a comparable shift. Existing paradigms each capture part of the problem. Physics-informed neural networks embed residual structure, yet they are often difficult to optimize in stiff, multiscale, or large-domain regimes. Neural operators amortize across instances, yet they commonly inherit a snapshot-prediction view of solving and can degrade over long rollouts. Diffusion-based solvers model uncertainty, yet they are often built on a solver template that still centers on state regression. We argue that the core issue is the abstraction used to train learned solvers. Many models are asked to predict states, while many scientific settings require modeling how uncertainty moves through constrained dynamics. The relevant object is transport over physically admissible futures. This motivates flow learners: models that parameterize transport vector fields and generate trajectories through integration, echoing the continuous dynamics that define PDE evolution. This physics-to-physics alignment supports continuous-time prediction, native uncertainty quantification, and new opportunities for physics-aware solver design. We explain why transport-based learning offers a stronger organizing principle for learned PDE solving and outline the research agenda that follows from this shift."
+  },
+  {
     "title": "Learning PDE Solvers with Physics and Data: A Unifying View of Physics-Informed Neural Networks and Neural Operators",
     "authors": "Y Dai, S Chen, Z Wang, X Jia, Y Xie, V Kumar, R Yu",
     "venue": "IJCAI 2026",
