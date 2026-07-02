@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-06",
+    "type": "preprint",
+    "text": "New preprint: <a href='https://arxiv.org/abs/2606.21781'>Physics-Preserving Latent Compression for Zero-Shot Resolution Transfer in 3D Turbulence</a> is now on arXiv."
+  },
+  {
     "date": "2026-05",
     "type": "accepted",
     "text": "Paper accepted at <strong>KDD 2026 (Blue Sky Track)</strong>: <a href='https://arxiv.org/abs/2604.07366'>Flow Learners for PDEs: Toward a Physics-to-Physics Paradigm for Scientific Computing</a>."
