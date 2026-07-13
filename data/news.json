@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-07",
+    "type": "accepted",
+    "text": "Paper accepted at <strong>SDM 2026 (SIAM)</strong>: <a href='https://arxiv.org/abs/2604.17149'>FlowRefiner: Flow Matching-Based Iterative Refinement for 3D Turbulent Flow Simulation</a>."
+  },
+  {
     "date": "2026-06",
     "type": "preprint",
     "text": "New preprint: <a href='https://arxiv.org/abs/2606.21781'>Physics-Preserving Latent Compression for Zero-Shot Resolution Transfer in 3D Turbulence</a> is now on arXiv."

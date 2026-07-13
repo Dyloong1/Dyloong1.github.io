@@ -41,8 +41,8 @@
   {
     "title": "FlowRefiner: Flow Matching-Based Iterative Refinement for 3D Turbulent Flow Simulation",
     "authors": "Y Dai, Y Sun, Y Chen, S Chen, X Jia, R Yu",
-    "venue": "arXiv",
-    "venueType": "preprint",
+    "venue": "SDM 2026",
+    "venueType": "published",
     "year": 2026,
     "tags": ["Physics-Informed ML"],
     "links": {
