@@ -55,8 +55,8 @@
   {
     "title": "Language-Conditioned World Modeling for Visual Navigation",
     "authors": "Y Dong*, F Wu*, Y Dai*, L Kong, G Chen, X Zhu, Q Hu, T Wang, J Garnica, F Liu, S Huang, Q Dai, ZQ Cheng",
-    "venue": "arXiv",
-    "venueType": "preprint",
+    "venue": "NeurIPS 2026 (Oral)",
+    "venueType": "published",
     "year": 2026,
     "tags": ["Computer Vision", "LLM"],
     "links": {
