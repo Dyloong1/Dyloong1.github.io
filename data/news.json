@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-09",
+    "type": "accepted",
+    "text": "Co-first-author paper accepted at <strong>NeurIPS 2026</strong> as an <strong>Oral</strong>: <a href='https://arxiv.org/abs/2603.26741'>Language-Conditioned World Modeling for Visual Navigation</a>."
+  },
+  {
     "date": "2026-08",
     "type": "accepted",
     "text": "Paper accepted at <strong>IEEE ICDM 2026</strong>: <a href='https://arxiv.org/abs/2606.21781'>Physics-Preserving Latent Compression for Zero-Shot Resolution Transfer in 3D Turbulence</a>. Code is open-sourced <a href='https://github.com/Dyloong1/PPLC4ICDM'>on GitHub</a>."
