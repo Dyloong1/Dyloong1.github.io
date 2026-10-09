@@ -482,22 +482,19 @@ img {
   padding: 0.3rem 0.7rem;
   border: 1px solid var(--border-light);
   border-radius: var(--radius);
-  background: transparent;
+  background: var(--bg);
   color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.2s ease;
   line-height: 1.4;
 }
 
-.pub-filter:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
+/* Same hover/active treatment as the About social icons */
+.pub-filter:hover,
 .pub-filter.active {
-  background: var(--accent);
-  color: #fff;
+  color: var(--accent);
   border-color: var(--accent);
+  background: var(--tag-bg);
 }
 
 .pub-list {
