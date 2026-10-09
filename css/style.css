@@ -22,7 +22,6 @@
   --lh-text: 1.7;
   --radius: 6px;
   --max-width: 1100px;
-  --max-width-wide: 90%;
   --nav-height: 56px;
 }
 
@@ -350,11 +349,6 @@ img {
   margin: 0 auto;
 }
 
-/* Publications get extra room so long titles wrap less */
-.section__inner--wide {
-  max-width: var(--max-width-wide);
-}
-
 .section__title {
   font-family: var(--font-display);
   font-size: 2rem;
@@ -507,6 +501,18 @@ img {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
+}
+
+/* On wide screens the heading and filters stay on the shared column while the
+   card grid breaks out symmetrically to 90% of the window, so long titles wrap
+   less. Below 1440px the overhang would be too small to read as intentional,
+   so the grid lines up with the column instead. */
+@media (min-width: 1440px) {
+  .pub-list {
+    --pub-width: min(90vw, 1440px);
+    width: var(--pub-width);
+    margin-left: calc((100% - var(--pub-width)) / 2);
+  }
 }
 
 .pub-card {
