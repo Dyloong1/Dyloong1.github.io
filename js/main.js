@@ -195,22 +195,27 @@ async function loadPublications() {
       card.className = 'pub-card fade-in';
       card.dataset.tags = JSON.stringify(pub.tags);
 
-      // Thumbnail: real image or gradient fallback
-      const thumbHtml = pub.thumbnail
+      // Thumbnail: real image or gradient fallback, linked to the paper
+      const mainLink = pub.links.arxiv || pub.links.pdf || pub.links.project || pub.links.code;
+      const thumbInner = pub.thumbnail
         ? `<div class="pub-thumb-img"><img src="${pub.thumbnail}" alt="${pub.title}" loading="lazy"></div>`
         : `<div class="pub-thumb ${gradientClass}"><span class="pub-thumb__label">${pub.tags[0] || ''}</span></div>`;
+      const thumbHtml = mainLink
+        ? `<a class="pub-thumb-link" href="${mainLink}" target="_blank" rel="noopener">${thumbInner}</a>`
+        : thumbInner;
+      const titleHtml = mainLink
+        ? `<a href="${mainLink}" target="_blank" rel="noopener">${pub.title}</a>`
+        : pub.title;
 
       card.innerHTML = `
         ${thumbHtml}
         <div class="pub-info">
-          <div class="pub-title">${pub.title}</div>
-          <div class="pub-authors">${highlightedAuthors}</div>
           ${venueDisplay}
+          <div class="pub-title">${titleHtml}</div>
+          <div class="pub-authors">${highlightedAuthors}</div>
           <div class="pub-links">
             ${linksHtml}
           </div>
-          ${pub.abstract ? `<button class="pub-abstract-toggle expanded" onclick="toggleAbstract(this)">Abstract <span class="arrow">▼</span></button>` : ''}
-          ${pub.abstract ? `<div class="pub-abstract expanded">${pub.abstract}</div>` : ''}
         </div>
       `;
 
@@ -234,24 +239,10 @@ async function loadPublications() {
       });
     });
 
-    // On mobile: collapse all abstracts by default
-    if (window.innerWidth <= 640) {
-      list.querySelectorAll('.pub-abstract').forEach(el => el.classList.remove('expanded'));
-      list.querySelectorAll('.pub-abstract-toggle').forEach(el => el.classList.remove('expanded'));
-    }
 
   } catch (e) {
     console.error('Failed to load publications:', e);
   }
-}
-
-/* --- Abstract toggle --- */
-function toggleAbstract(btn) {
-  const abstract = btn.closest('.pub-info').querySelector('.pub-abstract');
-  abstract.classList.toggle('expanded');
-  btn.classList.toggle('expanded');
-  const isExpanded = abstract.classList.contains('expanded');
-  btn.innerHTML = isExpanded ? 'Abstract <span class="arrow">▼</span>' : 'Abstract <span class="arrow">▼</span>';
 }
 
 /* --- Scroll Animations --- */
