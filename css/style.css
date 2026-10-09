@@ -22,6 +22,7 @@
   --lh-text: 1.7;
   --radius: 6px;
   --max-width: 1100px;
+  --max-width-wide: 1400px;
   --nav-height: 56px;
 }
 
@@ -347,6 +348,11 @@ img {
 .section__inner {
   max-width: var(--max-width);
   margin: 0 auto;
+}
+
+/* Publications get extra room so long titles wrap less */
+.section__inner--wide {
+  max-width: var(--max-width-wide);
 }
 
 .section__title {
