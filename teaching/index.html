@@ -1,160 +1,313 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Teaching Portfolio · Yilong Dai</title>
-<style>
-  :root {
-    --bg: #fbfaf7; --fg: #1f2328; --muted: #6b6f76; --accent: #9e1b32;
-    --card: #ffffff; --line: #e6e2da; --todo: #fff6e0; --todo-line: #e8c770;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #16181c; --fg: #e6e6e6; --muted: #9aa0a8; --accent: #e0607a;
-      --card: #1e2126; --line: #2e3238; --todo: #2a2516; --todo-line: #7a6326;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching Portfolio — Yilong Dai</title>
+  <meta name="description" content="Teaching portfolio of Yilong Dai, PhD student in Computer Science at the University of Alabama: teaching philosophy, PCK, learning goals, course design for Algorithms, and a syllabus review.">
+  <meta name="author" content="Yilong Dai">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Styles (shared with the main site) -->
+  <link rel="stylesheet" href="../css/style.css?v=6">
+  <style>
+    .page-header {
+      margin-top: var(--nav-height);
+      padding: clamp(64px, 8vh, 96px) 2rem clamp(32px, 4vh, 48px);
     }
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--fg);
-         font: 17px/1.65 Georgia, "Times New Roman", serif; }
-  header { border-bottom: 3px solid var(--accent); padding: 48px 16px 24px; }
-  header .wrap, main, nav .wrap, footer { max-width: 820px; margin: 0 auto; }
-  h1 { margin: 0; font-size: 2.1rem; }
-  header p { margin: 6px 0 0; color: var(--muted); font-family: system-ui, sans-serif; font-size: .95rem; }
-  nav { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--line); z-index: 1; }
-  nav .wrap { display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 10px 16px;
-              font-family: system-ui, sans-serif; font-size: .9rem; }
-  nav a { color: var(--fg); text-decoration: none; }
-  nav a:hover { color: var(--accent); }
-  main { padding: 8px 16px 48px; }
-  section { margin-top: 40px; }
-  h2 { font-size: 1.45rem; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
-  h3 { font-family: system-ui, sans-serif; font-size: .95rem; color: var(--muted);
-       font-weight: 600; margin: 22px 0 4px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 18px 22px; }
-  .card p:first-child { margin-top: 0; } .card p:last-child { margin-bottom: 0; }
-  ol li { margin-bottom: 10px; }
-  dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; }
-  dt { font-family: system-ui, sans-serif; font-weight: 600; }
-  dd { margin: 0; }
-  .todo { background: var(--todo); border: 1px dashed var(--todo-line); border-radius: 8px;
-          padding: 12px 16px; font-family: system-ui, sans-serif; font-size: .9rem; color: var(--muted); }
-  a { color: var(--accent); word-break: break-word; }
-  footer { padding: 24px 16px 40px; color: var(--muted); font-family: system-ui, sans-serif; font-size: .85rem; }
-  @media (max-width: 560px) { dl { grid-template-columns: 1fr; } dd { margin-bottom: 10px; } }
-</style>
+
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border-light);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card h3 {
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+      margin-top: 1.25rem;
+    }
+
+    .card h3:first-child {
+      margin-top: 0;
+    }
+
+    .card p {
+      margin-top: 0.35rem;
+    }
+
+    .card p:first-child {
+      margin-top: 0;
+    }
+
+    .card p + p {
+      margin-top: 0.75rem;
+    }
+
+    .card ol {
+      padding-left: 1.4rem;
+      margin-top: 0.35rem;
+    }
+
+    .card ol:first-child {
+      margin-top: 0;
+    }
+
+    .card li {
+      margin-bottom: 0.6rem;
+    }
+
+    .card li:last-child {
+      margin-bottom: 0;
+    }
+
+    .ple {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 0.6rem 1.5rem;
+    }
+
+    .ple dt {
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding-top: 0.15rem;
+    }
+
+    @media (max-width: 640px) {
+      .page-header .hero__tags {
+        justify-content: flex-start;
+      }
+
+      .ple {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+      }
+
+      .ple dd {
+        margin-bottom: 0.75rem;
+      }
+    }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Y</text></svg>">
 </head>
 <body>
 
-<header><div class="wrap">
-  <h1>Yilong Dai</h1>
-  <p>Teaching Portfolio · AHE 603, Fall 2026 · The University of Alabama</p>
-</div></header>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../" class="nav__logo" title="Back to homepage">YD</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#pck">PCK</a></li>
+        <li><a href="#ple">Learning Environment</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#design">Course Design</a></li>
+        <li><a href="#syllabus">Syllabus Review</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<nav><div class="wrap">
-  <a href="#philosophy">Teaching Philosophy</a>
-  <a href="#pck">Developing PCK</a>
-  <a href="#ple">Personal Learning Environment</a>
-  <a href="#goals">Learning Goals</a>
-  <a href="#design">Course Design: Algorithms</a>
-  <a href="#syllabus">Syllabus Review</a>
-</div></nav>
+  <!-- Header / About -->
+  <section class="page-header" id="about">
+    <div class="section__inner">
+      <h1 class="hero__name">Teaching Portfolio</h1>
+      <p class="hero__role">Yilong Dai · AHE 603, Fall 2026 · The University of Alabama</p>
+      <div class="hero__divider"></div>
+      <div class="hero__bio">
+        <p>I am a second-year PhD student in Computer Science at the University of Alabama, advised by <a href="https://runlongyu.github.io/" target="_blank" rel="noopener">Prof. Runlong Yu</a>. My research focuses on <strong>AI for Science</strong>. As a teacher, I am most interested in <strong>algorithms</strong>: helping students reason from first principles, turn real-life problems into computational ones, and build intuition with visualizations and demos.</p>
+        <p>More about me on my <a href="../">homepage</a>, or reach me at <a href="mailto:ydai17@ua.edu">ydai17@ua.edu</a>.</p>
+      </div>
+      <div class="hero__tags">
+        <span class="tag">Algorithms</span>
+        <span class="tag">First Principles</span>
+        <span class="tag">Greedy &amp; DP</span>
+        <span class="tag">Visual Learning</span>
+      </div>
+    </div>
+  </section>
 
-<main>
+  <!-- Teaching Philosophy -->
+  <section class="section section--alt" id="philosophy">
+    <div class="section__inner">
+      <h2 class="section__title">Teaching Philosophy Statement</h2>
+      <div class="card">
+        <ol>
+          <li>I believe students learn best when they are taught the latest knowledge, moving from the high-level picture down to the details, and when they are given a playground, or multiple approaches beyond words alone, to understand and practice what they learn. For example, when teaching a difficult concept, I start with visualizations and demos.</li>
+          <li>As an educator, my role is to teach my students to find their own first principles in every domain and to always look for the high-level guidance behind everything. I want my students to learn knowledge, and more than just knowledge: how to acquire it and how to question it with a clear mind. I also want to support my students’ mental health.</li>
+          <li>One way I connect course content to students’ prior knowledge or experience is by extending from their existing understanding and finding the underlying similarities and differences. I always start from the high level, with clear motivation and a clear chain of thought.</li>
+          <li>I know that meaningful learning has happened when students keep hold of the high-level ideas and motivations, and are able to respond, ask questions, and form their own understanding.</li>
+          <li>I will continue to develop my teaching by, first, improving how I understand the world and knowledge; second, keeping up with state-of-the-art (SOTA) methods and research; and finally, teaching more and more students. Because students are diverse, I will learn how to generalize my teaching so that it benefits as many students as possible.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-<section id="about">
-  <h2>About</h2>
-  <div class="todo">TODO: short bio / teaching interests / contact.</div>
-</section>
+  <!-- PCK -->
+  <section class="section" id="pck">
+    <div class="section__inner">
+      <h2 class="section__title">Developing Pedagogical Content Knowledge (PCK)</h2>
+      <div class="card">
+        <h3>How I learn to teach</h3>
+        <p>I learn how to teach by observing how my previous instructors taught their students, as well as how excellent presenters speak at conferences, and by imagining how I would want an instructor to teach me if I were a student.</p>
+        <h3>How it helps me develop PCK</h3>
+        <p>It lets me learn from their experience: how they interact with people from different backgrounds, and how they present difficult material and make it easier to learn.</p>
+        <h3>How I can continue to develop my PCK</h3>
+        <p>I will keep learning state-of-the-art methods, technology, and research, keep communicating with other great teachers, and attend conferences.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="philosophy">
-  <h2>Teaching Philosophy Statement</h2>
-  <div class="card">
-    <ol>
-      <li>I believe students learn best when they are taught the latest knowledge, moving from the high-level picture down to the details, and when they are given a playground, or multiple approaches beyond words alone, to understand and practice what they learn. For example, when teaching a difficult concept, I start with visualizations and demos.</li>
-      <li>As an educator, my role is to teach my students to find their own first principles in every domain and to always look for the high-level guidance behind everything. I want my students to learn knowledge, and more than just knowledge: how to acquire it and how to question it with a clear mind. I also want to support my students’ mental health.</li>
-      <li>One way I connect course content to students’ prior knowledge or experience is by extending from their existing understanding and finding the underlying similarities and differences. I always start from the high level, with clear motivation and a clear chain of thought.</li>
-      <li>I know that meaningful learning has happened when students keep hold of the high-level ideas and motivations, and are able to respond, ask questions, and form their own understanding.</li>
-      <li>I will continue to develop my teaching by, first, improving how I understand the world and knowledge; second, keeping up with state-of-the-art (SOTA) methods and research; and finally, teaching more and more students. Because students are diverse, I will learn how to generalize my teaching so that it benefits as many students as possible.</li>
-    </ol>
-  </div>
-</section>
+  <!-- Personal Learning Environment -->
+  <section class="section section--alt" id="ple">
+    <div class="section__inner">
+      <h2 class="section__title">Personal Learning Environment</h2>
+      <div class="card">
+        <dl class="ple">
+          <dt>People</dt><dd>Dr. Carver, Dr. Runlong Yu, Dr. Claire</dd>
+          <dt>Journals</dt><dd><i>College Teaching</i>, <i>Journal on Excellence in College Teaching</i>, <i>Journal of the Scholarship of Teaching and Learning</i>, IEEE journals</dd>
+          <dt>Conferences</dt><dd>Lilly Conference on College Teaching, The Teaching Professor Conference, IEEE conferences</dd>
+          <dt>Books</dt><dd>McKeachie, <i>McKeachie’s Teaching Tips</i>; Zakrajsek, <i>The New Science of Learning</i>; Ambrose et al., <i>How Learning Works</i></dd>
+          <dt>Tools</dt><dd>UATA, CrossAcademic, ChatGPT</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
 
-<section id="pck">
-  <h2>Developing Pedagogical Content Knowledge (PCK)</h2>
-  <div class="card">
-    <h3>How I learn to teach</h3>
-    <p>I learn how to teach by observing how my previous instructors taught their students, as well as how excellent presenters speak at conferences, and by imagining how I would want an instructor to teach me if I were a student.</p>
-    <h3>How it helps me develop PCK</h3>
-    <p>It lets me learn from their experience: how they interact with people from different backgrounds, and how they present difficult material and make it easier to learn.</p>
-    <h3>How I can continue to develop my PCK</h3>
-    <p>I will keep learning state-of-the-art methods, technology, and research, keep communicating with other great teachers, and attend conferences.</p>
-  </div>
-</section>
+  <!-- Learning Goals -->
+  <section class="section" id="goals">
+    <div class="section__inner">
+      <h2 class="section__title">Learning Goals, Objectives &amp; Outcomes</h2>
+      <p class="section__subtitle">Course: Algorithms</p>
+      <div class="card">
+        <h3>Goal</h3>
+        <p>Solve real-life problems using algorithmic thinking: starting from first principles, students learn to turn problems described in natural language into well-defined computational problems and to design efficient algorithms that solve them.</p>
+        <h3>Objectives</h3>
+        <ol>
+          <li>Introduce greedy algorithms through intuitive real-life examples, including cases where the greedy choice fails, so that students learn to question their first intuition.</li>
+          <li>Guide students from greedy algorithms to dynamic programming using the most representative DP problems, building the mindset of identifying repeated subproblems.</li>
+        </ol>
+        <h3>Outcomes</h3>
+        <ol>
+          <li>Given a real-life problem described in natural language, students will be able to formulate it as a computational problem (inputs, outputs, and constraints) and justify whether a greedy strategy gives an optimal solution, providing a counterexample when it does not.</li>
+          <li>Students will be able to identify the repeated subproblems in a problem, define a DP recurrence, implement the solution, and analyze its time and space complexity.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-<section id="ple">
-  <h2>Personal Learning Environment</h2>
-  <div class="card">
-    <dl>
-      <dt>People</dt><dd>Dr. Carver, Dr. Runlong, Dr. Claire</dd>
-      <dt>Journals</dt><dd><i>College Teaching</i>, <i>Journal on Excellence in College Teaching</i>, <i>Journal of the Scholarship of Teaching and Learning</i>, IEEE journals</dd>
-      <dt>Conferences</dt><dd>Lilly Conference on College Teaching, The Teaching Professor Conference, IEEE conferences</dd>
-      <dt>Books</dt><dd>McKeachie, <i>McKeachie’s Teaching Tips</i>; Zakrajsek, <i>The New Science of Learning</i>; Ambrose et al., <i>How Learning Works</i></dd>
-      <dt>Tools</dt><dd>UATA, CrossAcademic, ChatGPT</dd>
-    </dl>
-  </div>
-</section>
+  <!-- Course Design -->
+  <section class="section section--alt" id="design">
+    <div class="section__inner">
+      <h2 class="section__title">Course Design</h2>
+      <p class="section__subtitle">Course: Algorithms</p>
+      <div class="card">
+        <ol>
+          <li>Start from first principles: real-life problems described in natural language.</li>
+          <li>Begin with the most straightforward but tricky algorithms, such as greedy algorithms, to spark students’ interest.</li>
+          <li>Go deeper into dynamic programming (DP), which can also be a very engaging topic. Identifying repeated subproblems is the most interesting, important, and difficult mindset for CS students to develop.</li>
+          <li>Start with the most representative DP problems.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-<section id="goals">
-  <h2>Learning Goals, Objectives &amp; Outcomes: Algorithms</h2>
-  <div class="card">
-    <p><strong>Goal:</strong> Solve real-life problems using algorithmic thinking: starting from first principles, students learn to turn problems described in natural language into well-defined computational problems and to design efficient algorithms that solve them.</p>
-    <h3>Objectives</h3>
-    <ol>
-      <li>Introduce greedy algorithms through intuitive real-life examples, including cases where the greedy choice fails, so that students learn to question their first intuition.</li>
-      <li>Guide students from greedy algorithms to dynamic programming using the most representative DP problems, building the mindset of identifying repeated subproblems.</li>
-    </ol>
-    <h3>Outcomes</h3>
-    <ol>
-      <li>Given a real-life problem described in natural language, students will be able to formulate it as a computational problem (inputs, outputs, and constraints) and justify whether a greedy strategy gives an optimal solution, providing a counterexample when it does not.</li>
-      <li>Students will be able to identify the repeated subproblems in a problem, define a DP recurrence, implement the solution, and analyze its time and space complexity.</li>
-    </ol>
-  </div>
-</section>
+  <!-- Syllabus Review -->
+  <section class="section" id="syllabus">
+    <div class="section__inner">
+      <h2 class="section__title">Syllabus Review</h2>
+      <p class="section__subtitle">Reviewed: <a href="https://www.course-catalog.com/pccc/public/assets/uploads/CIS_108_Programming_Fundamentals_Standard_Syllabus_2024-25.pdf" target="_blank" rel="noopener">CIS 108 Programming Fundamentals, Standard Syllabus 2024–25</a> (Passaic County Community College)</p>
+      <div class="card">
+        <h3>What does the syllabus value?</h3>
+        <p>It values content coverage and rules. Most of the document is a chapter-by-chapter list of Python topics and a set of policies. It says very little about why students should learn programming, what motivates each topic, or who the instructor is and how to reach them.</p>
+        <h3>How are students expected to spend their time?</h3>
+        <p>Students spend 3 lecture hours per week in class and are expected to complete about 6 more hours of work outside class each week, so roughly 9 hours per week. All projects are done outside class, and there are no lab hours, even though lab projects are 30% of the grade.</p>
+        <h3>What behavior is rewarded?</h3>
+        <p>Tests, quizzes, and the final exam together count for 65% of the grade, lab projects for 30%, and attendance and activities for only 5%. This mainly rewards individual performance on timed exams, rather than building programs, explaining ideas, or collaborating.</p>
+        <h3>Are the goals aligned with the assessments?</h3>
+        <p>Only partially. The early outcomes (algorithms, selection, loops, strings, and lists) match the weekly schedule. However, outcomes 5–8 (classes and objects, documentation, graphics and image processing, and GUIs) never appear in the schedule, which ends with lists and text files. The schedule also says a final project is due in week 15, but there is no final project in the grading breakdown.</p>
+        <h3>What might make students anxious?</h3>
+        <p>Missed exams cannot be made up after the exam date, and make-ups require prior notification and original documentation. Students must earn a C or better to move on to CIS 160 and CIS 165, but no grade scale is given. There are no office hours, instructor contact information, or late-work policy, and the schedule is “subject to change.” A beginner reading this would know the penalties but not where to get help.</p>
+        <h3>What are the key sections, and what is missing?</h3>
+        <p>The key sections are the course learning outcomes, the grading breakdown, the weekly schedule, the make-up exam policy, and the accessibility accommodations. If I revised this syllabus, I would add a short motivation for the course, instructor contact information and office hours, a grade scale, a late-work policy, a policy on AI tools like ChatGPT, and support resources such as tutoring and the open lab. I would also update the 2013 textbook and align the schedule and the assessments with every stated outcome.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="design">
-  <h2>Course Design: Algorithms</h2>
-  <div class="card">
-    <p>Start from first principles: real-life problems described in natural language.</p>
-    <p>Begin with the most straightforward but tricky algorithms, such as greedy algorithms, to spark students’ interest.</p>
-    <p>Go deeper into dynamic programming (DP), which can also be a very engaging topic. Identifying repeated subproblems is the most interesting, important, and difficult mindset for CS students to develop.</p>
-    <p>Start with the most representative DP problems.</p>
-  </div>
-</section>
+  <!-- Contact / Footer -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner">
+      <h2 class="section__title">Get in Touch</h2>
+      <a href="mailto:ydai17@ua.edu" class="footer__email">ydai17@ua.edu</a>
+      <div class="footer__icons">
+        <a href="../" aria-label="Homepage"><i class="fas fa-house"></i></a>
+        <a href="https://github.com/Dyloong1" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=GsTyeUMAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://www.linkedin.com/in/yilong-dai-41489524a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="footer__updated">Last updated: October 2026</p>
+    </div>
+  </footer>
 
-<section id="syllabus">
-  <h2>Syllabus Review</h2>
-  <div class="card">
-    <p>Syllabus reviewed: <a href="https://www.course-catalog.com/pccc/public/assets/uploads/CIS_108_Programming_Fundamentals_Standard_Syllabus_2024-25.pdf">CIS 108 Programming Fundamentals, Standard Syllabus 2024–25</a> (Passaic County Community College)</p>
-    <h3>What does the syllabus value?</h3>
-    <p>It values content coverage and rules. Most of the document is a chapter-by-chapter list of Python topics and a set of policies. It says very little about why students should learn programming, what motivates each topic, or who the instructor is and how to reach them.</p>
-    <h3>How are students expected to spend their time?</h3>
-    <p>Students spend 3 lecture hours per week in class and are expected to complete about 6 more hours of work outside class each week, so roughly 9 hours per week. All projects are done outside class, and there are no lab hours, even though lab projects are 30% of the grade.</p>
-    <h3>What behavior is rewarded?</h3>
-    <p>Tests, quizzes, and the final exam together count for 65% of the grade, lab projects for 30%, and attendance and activities for only 5%. This mainly rewards individual performance on timed exams, rather than building programs, explaining ideas, or collaborating.</p>
-    <h3>Are the goals aligned with the assessments?</h3>
-    <p>Only partially. The early outcomes (algorithms, selection, loops, strings, and lists) match the weekly schedule. However, outcomes 5–8 (classes and objects, documentation, graphics and image processing, and GUIs) never appear in the schedule, which ends with lists and text files. The schedule also says a final project is due in week 15, but there is no final project in the grading breakdown.</p>
-    <h3>What might make students anxious?</h3>
-    <p>Missed exams cannot be made up after the exam date, and make-ups require prior notification and original documentation. Students must earn a C or better to move on to CIS 160 and CIS 165, but no grade scale is given. There are no office hours, instructor contact information, or late-work policy, and the schedule is “subject to change.” A beginner reading this would know the penalties but not where to get help.</p>
-    <h3>What are the key sections, and what is missing?</h3>
-    <p>The key sections are the course learning outcomes, the grading breakdown, the weekly schedule, the make-up exam policy, and the accessibility accommodations. If I revised this syllabus, I would add a short motivation for the course, instructor contact information and office hours, a grade scale, a late-work policy, a policy on AI tools like ChatGPT, and support resources such as tutoring and the open lab. I would also update the 2013 textbook and align the schedule and the assessments with every stated outcome.</p>
-  </div>
-</section>
+  <script>
+    (() => {
+      const toggle = document.getElementById('nav-toggle');
+      const links = document.getElementById('nav-links');
+      const nav = document.getElementById('nav');
 
-</main>
+      // Hamburger toggle
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        links.classList.toggle('open');
+      });
 
-<footer><div>Yilong Dai · Teaching Portfolio · Work in progress</div></footer>
+      // Close menu on link click
+      links.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          toggle.classList.remove('active');
+          links.classList.remove('open');
+        });
+      });
 
+      // Nav shadow and active link on scroll
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = links.querySelectorAll('a');
+
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('nav--scrolled', window.scrollY > 10);
+
+        let current = '';
+        sections.forEach(section => {
+          if (window.scrollY >= section.offsetTop - 100) {
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
