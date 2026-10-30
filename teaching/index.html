@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teaching Portfolio · Yilong Dai</title>
+<style>
+  :root {
+    --bg: #fbfaf7; --fg: #1f2328; --muted: #6b6f76; --accent: #9e1b32;
+    --card: #ffffff; --line: #e6e2da; --todo: #fff6e0; --todo-line: #e8c770;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181c; --fg: #e6e6e6; --muted: #9aa0a8; --accent: #e0607a;
+      --card: #1e2126; --line: #2e3238; --todo: #2a2516; --todo-line: #7a6326;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.65 Georgia, "Times New Roman", serif; }
+  header { border-bottom: 3px solid var(--accent); padding: 48px 16px 24px; }
+  header .wrap, main, nav .wrap, footer { max-width: 820px; margin: 0 auto; }
+  h1 { margin: 0; font-size: 2.1rem; }
+  header p { margin: 6px 0 0; color: var(--muted); font-family: system-ui, sans-serif; font-size: .95rem; }
+  nav { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--line); z-index: 1; }
+  nav .wrap { display: flex; flex-wrap: wrap; gap: 4px 18px; padding: 10px 16px;
+              font-family: system-ui, sans-serif; font-size: .9rem; }
+  nav a { color: var(--fg); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  main { padding: 8px 16px 48px; }
+  section { margin-top: 40px; }
+  h2 { font-size: 1.45rem; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+  h3 { font-family: system-ui, sans-serif; font-size: .95rem; color: var(--muted);
+       font-weight: 600; margin: 22px 0 4px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 18px 22px; }
+  .card p:first-child { margin-top: 0; } .card p:last-child { margin-bottom: 0; }
+  ol li { margin-bottom: 10px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; }
+  dt { font-family: system-ui, sans-serif; font-weight: 600; }
+  dd { margin: 0; }
+  .todo { background: var(--todo); border: 1px dashed var(--todo-line); border-radius: 8px;
+          padding: 12px 16px; font-family: system-ui, sans-serif; font-size: .9rem; color: var(--muted); }
+  a { color: var(--accent); word-break: break-word; }
+  footer { padding: 24px 16px 40px; color: var(--muted); font-family: system-ui, sans-serif; font-size: .85rem; }
+  @media (max-width: 560px) { dl { grid-template-columns: 1fr; } dd { margin-bottom: 10px; } }
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <h1>Yilong Dai</h1>
+  <p>Teaching Portfolio · AHE 603, Fall 2026 · The University of Alabama</p>
+</div></header>
+
+<nav><div class="wrap">
+  <a href="#philosophy">Teaching Philosophy</a>
+  <a href="#pck">Developing PCK</a>
+  <a href="#ple">Personal Learning Environment</a>
+  <a href="#goals">Learning Goals</a>
+  <a href="#design">Course Design: Algorithms</a>
+  <a href="#syllabus">Syllabus Review</a>
+</div></nav>
+
+<main>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="todo">TODO: short bio / teaching interests / contact.</div>
+</section>
+
+<section id="philosophy">
+  <h2>Teaching Philosophy Statement</h2>
+  <div class="card">
+    <ol>
+      <li>I believe students learn best when: they are taught with latest knowledge from high level to details, and give them a playground or multiple approaches other than only words for them to understand and practice their knowledge. For example, when you teach some difficult knowledge, you give some visualization, you give some demos to start with.</li>
+      <li>As an educator, my role is: teach my students to find their own first principles of all the domain, always learn high-level guidance of everything. I want my students to learn knowledge and more than just knowledge, such as how to acquire knowledge, how to question knowledge with a clear mind. Also maintain a great mental health of students.</li>
+      <li>One way I connect course content to students’ prior knowledge or experience is: do extensions from their understanding, find interior similarities and differences. Always goes from high level, with clear motivation and clear chain of thought.</li>
+      <li>I know that meaningful learning has happened when students always stay with the high level ideas, motivations and be able to response, question and have their own understanding.</li>
+      <li>I will continue to develop my teaching by: first improving how I understand the world and knowledge, second keep following the SOTA methodology and studies, finally keep doing this by teaching more and more students and because of the heterogeneity of students, find out how to generalize my teaching ability to benefit as many students as I can.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="pck">
+  <h2>Developing Pedagogical Content Knowledge (PCK)</h2>
+  <div class="card">
+    <h3>How I learn to teach</h3>
+    <p>I learn how to teach by observing how my previous instructor teach students, also those excellent presenters during conference, and imagine how I want my instructor to teach me if I am a student.</p>
+    <h3>How it helps me develop PCK</h3>
+    <p>learn experience, how they interact with people with different background, how they present the difficult knowledge and make it easier to learn.</p>
+    <h3>How I can continue to develop my PCK</h3>
+    <p>always keep learning SOTA methods, technology, research, keep communicate with other great teacher and attend conference.</p>
+  </div>
+</section>
+
+<section id="ple">
+  <h2>Personal Learning Environment</h2>
+  <div class="card">
+    <dl>
+      <dt>People</dt><dd>Dr. Carver, Dr. Runlong, Dr. Claire</dd>
+      <dt>Journals</dt><dd>College teaching, on excellent college teaching, scholarship of teaching and learning, IEEE</dd>
+      <dt>Conferences</dt><dd>illy conference in college teaching, the teaching professor, IEEE</dd>
+      <dt>Books</dt><dd>Mckieche teaching tips, zakrajsek new science of learning, Amrose how students learn</dd>
+      <dt>Tools</dt><dd>UATA, cross academic, ChatGPT</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="goals">
+  <h2>Learning Goals, Objectives &amp; Outcomes: Algorithms</h2>
+  <div class="card">
+    <p><strong>Goal:</strong> Solve real life problems using a</p>
+  </div>
+  <div class="todo" style="margin-top:12px">TODO: finish goal; add 2 objectives and 2 outcomes.</div>
+</section>
+
+<section id="design">
+  <h2>Course Design: Algorithms</h2>
+  <div class="card">
+    <p>First principle of the problems, from real-life problems in natural language.</p>
+    <p>From the most straightforward but tricky algorithm like the greedy algorithm to trigger students’ interest.</p>
+    <p>Go deeper to Dynamic Programming, it still can be a very attractive topic. Identifying repeating subquestions is the most interesting, important and also difficult mindset for CS students.</p>
+    <p>Start with most representative DP questions.</p>
+  </div>
+</section>
+
+<section id="syllabus">
+  <h2>Syllabus Review</h2>
+  <div class="card">
+    <p>Syllabus reviewed: <a href="https://www.course-catalog.com/pccc/public/assets/uploads/CIS_108_Programming_Fundamentals_Standard_Syllabus_2024-25.pdf">CIS 108 Programming Fundamentals, Standard Syllabus 2024–25</a></p>
+  </div>
+  <div class="todo" style="margin-top:12px">TODO: answers to the review questions (values, student time, rewarded behavior, goal–assessment alignment, student anxieties, key sections).</div>
+</section>
+
+</main>
+
+<footer><div>Yilong Dai · Teaching Portfolio · Work in progress</div></footer>
+
+</body>
+</html>
