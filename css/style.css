@@ -246,7 +246,7 @@ button:focus-visible {
   justify-content: center;
   width: 36px;
   height: 36px;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   color: var(--text-secondary);
   background: none;
   border: 1px solid transparent;
