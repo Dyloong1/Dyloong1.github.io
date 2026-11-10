@@ -2,7 +2,7 @@
   {
     "date": "2026-11",
     "type": "accepted",
-    "text": "Paper accepted at <strong>KDD 2027 (Datasets and Benchmarks Track)</strong>: TIDE: A Physically Diverse 3D Turbulence Benchmark Dataset for Advancing Scientific Machine Learning."
+    "text": "Paper accepted at <strong>KDD 2027 (Datasets and Benchmarks Track)</strong>: <a href='https://arxiv.org/abs/2608.04222'>TIDE: A Physically Diverse 3D Turbulence Benchmark Dataset for Advancing Scientific Machine Learning</a>. Code is on <a href='https://github.com/Dyloong1/TIDE-dataset-benchmark'>GitHub</a> and the dataset is on <a href='https://huggingface.co/datasets/ydai17/TIDE'>Hugging Face</a>."
   },
   {
     "date": "2026-09",

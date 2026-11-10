@@ -184,6 +184,7 @@ async function loadPublications() {
       if (pub.links.arxiv) linksHtml += `<a href="${pub.links.arxiv}" target="_blank" rel="noopener" class="pub-link">arXiv</a>`;
       if (pub.links.pdf) linksHtml += `<a href="${pub.links.pdf}" target="_blank" rel="noopener" class="pub-link">PDF</a>`;
       if (pub.links.code) linksHtml += `<a href="${pub.links.code}" target="_blank" rel="noopener" class="pub-link">Code</a>`;
+      if (pub.links.dataset) linksHtml += `<a href="${pub.links.dataset}" target="_blank" rel="noopener" class="pub-link">Dataset</a>`;
       if (pub.links.project) linksHtml += `<a href="${pub.links.project}" target="_blank" rel="noopener" class="pub-link">Project</a>`;
 
       // Venue display
