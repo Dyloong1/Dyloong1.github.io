@@ -11,7 +11,7 @@
       "code": "https://github.com/Dyloong1/TIDE-dataset-benchmark",
       "dataset": "https://huggingface.co/datasets/ydai17/TIDE"
     },
-    "thumbnail": "assets/images/pub-thumbnails/tide.jpg",
+    "thumbnail": "assets/images/pub-thumbnails/tide.webp",
     "abstract": "Turbulence has long served as a proving ground for machine learning on physical dynamics: its governing laws are known exactly as the incompressible Navier-Stokes (NS) equations, and methods are routinely developed and validated on turbulent flows, with lessons that carry to data-driven modelling across mechanics. Yet most of this work is 2D, while 3D turbulence is qualitatively different physics and the setting where data is scarcest. The 3D resources we survey provide one realization per configuration, leaving no way to tell a model that learned the dynamics from one that fit a single flow's statistics, and PDE foundation models pretrain predominantly on 1D/2D corpora. We release TIDE (Turbulent Incompressible DNS Ensembles), a 256^3 DNS corpus built to supply controlled physical diversity: 15 configurations along eight physics axes, independent ensembles per configuration, a pressure channel, and acceptance against a fixed standard with equation-level checks. A companion benchmark adds five tasks, learned baselines, generalization splits along the axes, and physical-fidelity metrics beside pointwise error. The axes are not equivalent: most regime shifts are matters of training coverage, but whether a flow is driven or freely decaying cannot be read from a single snapshot, so operators trained under forcing keep predicting forced evolution on decaying flows. We report this missing conditioning input as an open problem the corpus makes measurable. TIDE serves both as an evaluation substrate and as a pretraining corpus for 3D incompressible turbulence."
   },
   {
@@ -25,7 +25,7 @@
       "arxiv": "https://arxiv.org/abs/2606.21781",
       "code": "https://github.com/Dyloong1/PPLC4ICDM"
     },
-    "thumbnail": "assets/images/pub-thumbnails/PPLC.jpg",
+    "thumbnail": "assets/images/pub-thumbnails/PPLC.webp",
     "abstract": "High-resolution turbulence modeling is essential for scientific computing, but remains constrained by the cost of direct numerical simulation and the scarcity of full-resolution data. Existing scientific compressors reduce storage but typically operate on per-frame representations, whereas learned compressors yield compact latents that are often resolution-dependent and weakly aligned with the physics of turbulence. This raises the need for a compression framework that reduces data size, preserves physical diagnostics, and transfers from low-resolution training fields to high-resolution test fields without retraining. In this paper, we propose Physics-Preserving Latent Compression (PPLC), a patch-local latent compressor for three-dimensional turbulence. Motivated by inertial-range scale similarity, PPLC treats fixed-size patches as transferable units and applies a shared variational autoencoder independently of the global grid size. It combines exact mean preservation, zero-mean fluctuation encoding, an invertible Haar wavelet front-end, shift-consistency regularization, and overlap-aware reconstruction. Instantiated on forced isotropic turbulence, PPLC is trained only on stride-downsampled 256^3 fields and transfers zero-shot to 1024^3 fields. Experiments show that PPLC improves the balance between reconstruction accuracy and physical fidelity over classical and learned baselines, keeping diagnostics such as dissipation, enstrophy, energy spectra, and incompressibility closer to the ground truth. Beyond turbulence compression, PPLC offers a general strategy for physics-preserving latent representations that support data-efficient scientific surrogate modeling."
   },
   {
@@ -38,7 +38,7 @@
     "links": {
       "arxiv": "https://arxiv.org/abs/2604.07366"
     },
-    "thumbnail": "assets/images/pub-thumbnails/flow_learner_fig1.png",
+    "thumbnail": "assets/images/pub-thumbnails/flow_learner_fig1.webp",
     "abstract": "Partial differential equations (PDEs) govern nearly every physical process in science and engineering, yet solving them at scale remains prohibitively expensive. Generative AI has transformed language, vision, and protein science, but learned PDE solvers have not undergone a comparable shift. Existing paradigms each capture part of the problem. Physics-informed neural networks embed residual structure, yet they are often difficult to optimize in stiff, multiscale, or large-domain regimes. Neural operators amortize across instances, yet they commonly inherit a snapshot-prediction view of solving and can degrade over long rollouts. Diffusion-based solvers model uncertainty, yet they are often built on a solver template that still centers on state regression. We argue that the core issue is the abstraction used to train learned solvers. Many models are asked to predict states, while many scientific settings require modeling how uncertainty moves through constrained dynamics. The relevant object is transport over physically admissible futures. This motivates flow learners: models that parameterize transport vector fields and generate trajectories through integration, echoing the continuous dynamics that define PDE evolution. This physics-to-physics alignment supports continuous-time prediction, native uncertainty quantification, and new opportunities for physics-aware solver design. We explain why transport-based learning offers a stronger organizing principle for learned PDE solving and outline the research agenda that follows from this shift."
   },
   {
@@ -51,7 +51,7 @@
     "links": {
       "arxiv": "https://arxiv.org/abs/2601.14517"
     },
-    "thumbnail": "assets/images/pub-thumbnails/pde-solvers.png",
+    "thumbnail": "assets/images/pub-thumbnails/pde-solvers.webp",
     "abstract": "Partial differential equations (PDEs) are central to scientific modeling. Despite the emergence of various physics-aware data-driven approaches, the field still lacks a unified perspective to uncover their relationships, limitations, and appropriate roles in scientific workflows. We propose a unifying perspective to place two dominant paradigms — Physics-Informed Neural Networks (PINNs) and Neural Operators (NOs) — within a shared design space. We organize existing methods from three fundamental dimensions: what is learned, how physical structures are integrated into the learning process, and how the computational load is amortized across problem instances."
   },
   {
@@ -64,7 +64,7 @@
     "links": {
       "arxiv": "https://arxiv.org/abs/2604.17149"
     },
-    "thumbnail": "assets/images/pub-thumbnails/flow_refiner.png",
+    "thumbnail": "assets/images/pub-thumbnails/flow_refiner.webp",
     "abstract": "Accurate autoregressive prediction of 3D turbulent flows remains challenging for neural PDE solvers, as small errors in fine-scale structures can accumulate rapidly over rollout. In this paper, we propose FlowRefiner, a flow matching-based iterative refinement framework for 3D turbulent flow simulation. The method replaces stochastic denoising refinement with deterministic ODE-based correction, uses a unified velocity-field regression objective across all refinement stages, and introduces a decoupled sigma schedule that fixes the noise range independently of refinement depth. These design choices yield stable and effective refinement in the small-noise regime. Experiments on large-scale 3D turbulence with rich multi-scale structures show that FlowRefiner achieves state-of-the-art autoregressive prediction accuracy and strong physical consistency. Although developed for turbulent flow simulation, the proposed framework is broadly applicable to iterative refinement problems in scientific modeling."
   },
   {
@@ -77,7 +77,7 @@
     "links": {
       "arxiv": "https://arxiv.org/abs/2603.26741"
     },
-    "thumbnail": "assets/images/pub-thumbnails/lantern.png",
+    "thumbnail": "assets/images/pub-thumbnails/lantern.webp",
     "abstract": "We address language-conditioned visual navigation where an embodied agent must follow natural language instructions using only initial egocentric observations. We formulate this as open-loop trajectory prediction and create the LCVN Dataset containing 39,016 trajectories with 117,048 human-verified instructions. We develop two complementary model families: one combining a diffusion-based world model (LCVN-WM) with an actor-critic agent (LCVN-AC) operating in latent space, and another using an autoregressive multimodal architecture (LCVN-Uni) that predicts both actions and future observations."
   },
   {
@@ -90,7 +90,7 @@
     "links": {
       "arxiv": "https://arxiv.org/abs/2601.15671"
     },
-    "thumbnail": "assets/images/pub-thumbnails/streetdesignai.png",
+    "thumbnail": "assets/images/pub-thumbnails/streetdesignai.webp",
     "abstract": "Designing inclusive cycling infrastructure requires balancing competing needs of diverse user groups, yet designers often struggle to anticipate how different cyclists experience the same street. We present StreetDesignAI, an interactive system that enables designers to ground evaluation in street context through imagery and map data, receive parallel feedback from cyclist personas spanning confident to cautious users, and iteratively modify designs while surfacing conflicts across perspectives. A within-subjects study with 26 transportation professionals demonstrates that structured multi-perspective feedback significantly improves designers' understanding of diverse user perspectives."
   },
   {
@@ -104,7 +104,7 @@
       "arxiv": "https://arxiv.org/abs/2602.10150",
       "code": "https://github.com/Dyloong1/PEST"
     },
-    "thumbnail": "assets/images/pub-thumbnails/pest.png",
+    "thumbnail": "assets/images/pub-thumbnails/pest.webp",
     "abstract": "Accurate simulation of turbulent flows is fundamental to scientific and engineering applications. Direct numerical simulation (DNS) offers the highest fidelity but is computationally prohibitive, while existing data-driven alternatives struggle with stable long-horizon rollouts, physical consistency, and faithful simulation of small-scale structures. To address these challenges, we propose a Physics-Enhanced Swin Transformer (PEST) for 3D turbulence simulation. PEST leverages a window-based self-attention mechanism to effectively model localized PDE interactions while maintaining computational efficiency. We introduce a frequency-domain adaptive loss that explicitly emphasizes small-scale structures, enabling more faithful simulation of high-frequency dynamics. To improve physical consistency, we incorporate Navier-Stokes residual constraints and divergence-free regularization directly into the learning objective."
   },
   {
@@ -118,7 +118,7 @@
       "arxiv": "https://arxiv.org/abs/2601.03534",
       "code": "https://github.com/Dyloong1/Bikeability-Assessment"
     },
-    "thumbnail": "assets/images/pub-thumbnails/bikeability.png",
+    "thumbnail": "assets/images/pub-thumbnails/bikeability.webp",
     "abstract": "Bikeability assessment is essential for advancing sustainable urban transportation and creating cyclist-friendly cities. We propose a persona-aware Vision-Language Model framework with three key innovations: theory-grounded persona conditioning based on cyclist typology, multi-granularity supervised fine-tuning combining expert annotations with user ratings, and AI-enabled data augmentation for isolating infrastructure impacts. We developed a crowdsourcing system collecting 12,400 assessments from 427 cyclists using panoramic images. Results demonstrate the framework provides competitive bikeability rating predictions while enabling explainable factor attribution."
   },
   {
@@ -131,7 +131,7 @@
     "links": {
       "pdf": "https://aclanthology.org/2025.findings-emnlp.972.pdf"
     },
-    "thumbnail": "assets/images/pub-thumbnails/finllm.png",
+    "thumbnail": "assets/images/pub-thumbnails/finllm.webp",
     "abstract": "Large language models (LLMs) are increasingly applied to finance, yet challenges remain in aligning their capabilities with real-world institutional demands. We provide a systematic, dual-perspective review bridging financial practice and LLM research. From a practitioner-centric standpoint, we introduce a functional taxonomy covering five core financial domains — Data Analysis, Investment Research, Trading, Investment Management, and Risk Management. From a research-focused perspective, we analyze key modeling challenges, including numerical reasoning limitations, prompt sensitivity, and lack of real-time adaptability. We comprehensively catalog over 30 financial benchmarks and 20 representative models."
   },
   {
@@ -144,7 +144,7 @@
     "links": {
       "pdf": "https://drive.google.com/file/d/13j4DRfTqSd7juv1muIJWN91VTOcx2-IY/view?usp=sharing"
     },
-    "thumbnail": "assets/images/pub-thumbnails/busstop.png",
+    "thumbnail": "assets/images/pub-thumbnails/busstop.webp",
     "abstract": "The assessment of bus stop amenities is important for providing fundamental data for public transit research, planning, and infrastructure enhancements. This study develops an automated, low-cost, and generalizable approach using Google Street View images and deep learning techniques to evaluate bus stop amenities. Leveraging the YOLOv8 model, transfer learning, and a dynamic prediction algorithm, the approach achieves efficient detection of shelters and benches with high accuracy and precision in major Florida cities. Results reveal highly heterogeneous spatial patterns for both shelters and benches within and across cities."
   },
   {
@@ -157,7 +157,7 @@
     "links": {
       "arxiv": "https://arxiv.org/abs/2509.05469"
     },
-    "thumbnail": "assets/images/pub-thumbnails/street-design.png",
+    "thumbnail": "assets/images/pub-thumbnails/street-design.webp",
     "abstract": "Realistic visual renderings of street-design scenarios are essential for public engagement in active transportation planning. We introduce a multi-agent system that edits and redesigns bicycle facilities directly on real-world street-view imagery. The framework integrates lane localization, prompt optimization, design generation, and automated evaluation to synthesize realistic, contextually appropriate designs. Experiments across diverse urban scenarios demonstrate that the system can adapt to varying road geometries and environmental conditions, consistently yielding visually coherent and instruction-compliant results."
   },
   {
@@ -170,7 +170,7 @@
     "links": {
       "arxiv": "https://arxiv.org/abs/2508.09547"
     },
-    "thumbnail": "assets/images/pub-thumbnails/govig.png",
+    "thumbnail": "assets/images/pub-thumbnails/govig.webp",
     "abstract": "We introduce Goal-Conditioned Visual Navigation Instruction Generation (GoViG), a new task that aims to autonomously generate precise and contextually coherent navigation instructions solely from egocentric visual observations of initial and goal states. Our method decomposes this into two subtasks: visual forecasting, which predicts intermediate visual states; and instruction generation, which synthesizes linguistically coherent instructions grounded in both observed and anticipated visuals. These subtasks are integrated within an autoregressive multimodal large language model trained with tailored objectives."
   },
   {
@@ -183,7 +183,7 @@
     "links": {
       "arxiv": "https://arxiv.org/abs/2506.03543"
     },
-    "thumbnail": "assets/images/pub-thumbnails/cognipair.png",
+    "thumbnail": "assets/images/pub-thumbnails/cognipair.webp",
     "abstract": "Current large language model agents lack authentic human psychological processes necessary for genuine digital twins and social AI applications. We present a computational implementation of Global Workspace Theory that integrates human cognitive architecture principles into LLM agents, creating specialized sub-agents for emotion, memory, social norms, planning, and goal-tracking coordinated through a global workspace mechanism. The CogniPair platform enables digital twins to engage in realistic simulated dating interactions and job interviews. Validation demonstrates 72% correlation with human attraction patterns and 77.8% match prediction accuracy."
   }
 ]
