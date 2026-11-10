@@ -1,5 +1,16 @@
 [
   {
+    "title": "TIDE: A Physically Diverse 3D Turbulence Benchmark Dataset for Advancing Scientific Machine Learning",
+    "authors": "Y Dai, Y Sun, Y Chen, S Chen, P Givi, X Jia, R Yu",
+    "venue": "KDD 2027 (Datasets and Benchmarks Track)",
+    "venueType": "published",
+    "year": 2027,
+    "tags": ["Physics-Informed ML"],
+    "links": {},
+    "thumbnail": "assets/images/pub-thumbnails/tide.jpg",
+    "abstract": "Turbulence has long served as a proving ground for machine learning on physical dynamics: its governing laws are known exactly as the incompressible Navier-Stokes (NS) equations, and methods are routinely developed and validated on turbulent flows, with lessons that carry to data-driven modelling across mechanics. Yet most of this work is 2D, while 3D turbulence is qualitatively different physics and the setting where data is scarcest. The 3D resources we survey provide one realization per configuration, leaving no way to tell a model that learned the dynamics from one that fit a single flow's statistics, and PDE foundation models pretrain predominantly on 1D/2D corpora. We release TIDE (Turbulent Incompressible DNS Ensembles), a 256^3 DNS corpus built to supply controlled physical diversity: 15 configurations along eight physics axes, independent ensembles per configuration, a pressure channel, and acceptance against a fixed standard with equation-level checks. A companion benchmark adds five tasks, learned baselines, generalization splits along the axes, and physical-fidelity metrics beside pointwise error. The axes are not equivalent: most regime shifts are matters of training coverage, but whether a flow is driven or freely decaying cannot be read from a single snapshot, so operators trained under forcing keep predicting forced evolution on decaying flows. We report this missing conditioning input as an open problem the corpus makes measurable. TIDE serves both as an evaluation substrate and as a pretraining corpus for 3D incompressible turbulence."
+  },
+  {
     "title": "Physics-Preserving Latent Compression for Zero-Shot Resolution Transfer in 3D Turbulence",
     "authors": "Y Dai, Y Sun, Y Chen, Z Wang, S Chen, X Jia, R Yu",
     "venue": "ICDM 2026",
