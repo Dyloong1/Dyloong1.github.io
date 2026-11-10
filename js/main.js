@@ -3,6 +3,7 @@
    ============================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initReveal();
   initNav();
   initBackToTop();
@@ -12,6 +13,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const prefersReducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* --- Theme ---
+   The page follows the system colour scheme until the visitor uses the
+   toggle; that choice is saved and applied before first paint by the inline
+   script in <head>. */
+function initTheme() {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  const root = document.documentElement;
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  const current = () => root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light');
+
+  const render = () => {
+    const theme = current();
+    const label = theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
+    btn.querySelector('use').setAttribute('href', theme === 'dark' ? '#i-sun' : '#i-moon');
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', label);
+    // A saved choice overrides the media-matched theme-color tags.
+    if (root.hasAttribute('data-theme')) {
+      document.querySelectorAll('meta[name="theme-color"]').forEach(m =>
+        m.setAttribute('content', theme === 'dark' ? '#0d1117' : '#ffffff'));
+    }
+  };
+
+  btn.addEventListener('click', () => {
+    const next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) { /* private mode */ }
+    render();
+  });
+  mq.addEventListener('change', render);
+  render();
+}
 
 /* --- Reveal on scroll ---
    Elements with .fade-in start transparent (only when JS runs, see the

@@ -16,8 +16,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
+  <!-- Apply the theme saved on the homepage before first paint -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Styles (shared with the main site) -->
-  <link rel="stylesheet" href="../css/style.css?v=6">
+  <link rel="stylesheet" href="../css/style.css?v=16">
   <style>
     .page-header {
       margin-top: var(--nav-height);
